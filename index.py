@@ -118,6 +118,7 @@ The dataset contains images with 5 classes, including lung and colon cancer and 
 Each class contains 5,000 images of the following histologic entities: colon adenocarcinoma, 
 benign colonic tissue, lung adenocarcinoma, lung squamous cell carcinoma, and normal lung tissue. The 
 dataset is publicly available on Kaggle and was assembled by Andrew A. Borkowski and his associates.<br>
+<img src = "https://github.com/Snehee2901/CancerApp/blob/main/lungaca1.jpeg">
 </div>""",
         unsafe_allow_html=True,
     )
