@@ -147,23 +147,23 @@ dataset is publicly available on Kaggle and was assembled by Andrew A. Borkowski
     image_data = [
         {
             "label": "Lung Adenocarcinoma",
-            "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungaca1.jpeg?raw=true",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/assets/lungaca1.jpeg?raw=true",
         },
         {
             "label": "Lung Benign Tissue",
-            "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungn1.jpeg?raw=true",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/assets/lungn1.jpeg?raw=true",
         },
         {
             "label": "Lung Squamous Cell Carcinoma",
-            "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungscc1.jpeg?raw=true",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/assets/lungscc1.jpeg?raw=true",
         },
         {
             "label": "Colon Adenocarcinoma",
-            "url": "https://github.com/Snehee2901/CancerApp/blob/main/colonca1.jpeg?raw=true",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/assets/colonca1.jpeg?raw=true",
         },
         {
             "label": "Colon Benign Tissue",
-            "url": "https://github.com/Snehee2901/CancerApp/blob/main/colonn4.jpeg?raw=true",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/assets/colonn4.jpeg?raw=true",
         },
     ]
 
@@ -188,11 +188,11 @@ if selected == "Model information":
         unsafe_allow_html=True,
     )
     st.markdown(
-        """<h4>Confusion matrix</h4><img alt="Confusion matrix.png" src="https://github.com/Snehee2901/CancerApp/blob/main/Confusion%20matrix.png?raw=true" data-hpc="true" style="margin:10px;;height:275px;">""",
+        """<h4>Confusion matrix</h4><img alt="Confusion matrix.png" src="https://github.com/Snehee2901/CancerApp/blob/main/assets/Confusion%20matrix.png?raw=true" data-hpc="true" style="margin:10px;;height:275px;">""",
         unsafe_allow_html=True,
     )
     st.markdown(
-        """<h4>Accuracy Plot</h4><img alt="accuracyplot.png" src="https://github.com/Snehee2901/CancerApp/blob/main/accuracyplot.png?raw=true" data-hpc="true" style="margin:10px;;height:275px;">""",
+        """<h4>Accuracy Plot</h4><img alt="accuracyplot.png" src="https://github.com/Snehee2901/CancerApp/blob/main/assets/accuracyplot.png?raw=true" data-hpc="true" style="margin:10px;;height:275px;">""",
         unsafe_allow_html=True,
     )
     st.markdown(
