@@ -30,6 +30,27 @@ selected = st.sidebar.selectbox(
     "Select page : ", ["Model predictions", "Model information", "Information page"]
 )
 
+sidebar_card_style = """
+    background-color: blue;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: black;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+"""
+
+# Sidebar title
+st.sidebar.markdown(
+    "<h2 style='text-align: center;height:200px;margin-top:20px;margin-bottom:0px;'></h2>",
+    unsafe_allow_html=True,
+)
+
+# Sidebar content inside the card-like structure
+with st.sidebar.markdown("", unsafe_allow_html=True):
+    st.markdown("<h3>Card Content</h3>", unsafe_allow_html=True)
+    st.write("For any queries related to the app contact: snemvp2001@gmail.com")
+
+# Apply custom CSS styling to the sidebar card
+
 
 class CNN(nn.Module):
     def __init__(self, num_classes):
@@ -166,7 +187,17 @@ if selected == "Model information":
                   </div>""",
         unsafe_allow_html=True,
     )
-    st.markdown("""<img src ="">""", unsafe_allow_html=True)
+    st.markdown(
+        """<h4>Confusion matrix</h4><img alt="Confusion matrix.png" src="https://github.com/Snehee2901/CancerApp/blob/main/Confusion%20matrix.png?raw=true" data-hpc="true" style="margin:10px;;height:275px;">""",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        """<h4>Accuracy Plot</h4><img alt="accuracyplot.png" src="https://github.com/Snehee2901/CancerApp/blob/main/accuracyplot.png?raw=true" data-hpc="true" style="margin:10px;;height:275px;">""",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        """The accuracy of the model is about <b>90%</b>""", unsafe_allow_html=True
+    )
 # Display the uploaded image
 if selected == "Model predictions":
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
