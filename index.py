@@ -27,7 +27,7 @@ st.title("Lung and Colon Cancer Prediction")
 # Image uploader widget
 st.sidebar.title("Welcome 👋")
 selected = st.sidebar.selectbox(
-    "Select page : ", ["Information page", "Model information", "Model predictions"]
+    "Select page : ", ["Model predictions", "Model information", "Information page"]
 )
 
 
@@ -118,10 +118,45 @@ The dataset contains images with 5 classes, including lung and colon cancer and 
 Each class contains 5,000 images of the following histologic entities: colon adenocarcinoma, 
 benign colonic tissue, lung adenocarcinoma, lung squamous cell carcinoma, and normal lung tissue. The 
 dataset is publicly available on Kaggle and was assembled by Andrew A. Borkowski and his associates.<br>
-<img src = "https://github.com/Snehee2901/CancerApp/blob/main/lungaca1.jpeg">
-</div>""",
+</div><br><br><br>""",
         unsafe_allow_html=True,
     )
+# Image data
+
+image_data = [
+    {
+        "label": "Lung Adenocarcinoma",
+        "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungaca1.jpeg?raw=true",
+    },
+    {
+        "label": "Lung Benign Tissue",
+        "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungn1.jpeg?raw=true",
+    },
+    {
+        "label": "Lung Squamous Cell Carcinoma",
+        "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungscc1.jpeg?raw=true",
+    },
+    {
+        "label": "Colon Adenocarcinoma",
+        "url": "https://github.com/Snehee2901/CancerApp/blob/main/colonca1.jpeg?raw=true",
+    },
+    {
+        "label": "Colon Benign Tissue",
+        "url": "https://github.com/Snehee2901/CancerApp/blob/main/colonn4.jpeg?raw=true",
+    },
+]
+
+# Number of columns in the gallery
+num_columns = 2
+
+# Create a grid layout for the gallery
+cols = st.columns(num_columns)
+
+# Display images and captions in the gallery
+for i, data in enumerate(image_data):
+    with cols[i % num_columns]:
+        st.image(data["url"], caption=data["label"], use_column_width=True)
+
 # Display the uploaded image
 if selected == "Model predictions":
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
