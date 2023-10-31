@@ -121,42 +121,52 @@ dataset is publicly available on Kaggle and was assembled by Andrew A. Borkowski
 </div><br><br><br>""",
         unsafe_allow_html=True,
     )
-# Image data
+    # Image data
 
-image_data = [
-    {
-        "label": "Lung Adenocarcinoma",
-        "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungaca1.jpeg?raw=true",
-    },
-    {
-        "label": "Lung Benign Tissue",
-        "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungn1.jpeg?raw=true",
-    },
-    {
-        "label": "Lung Squamous Cell Carcinoma",
-        "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungscc1.jpeg?raw=true",
-    },
-    {
-        "label": "Colon Adenocarcinoma",
-        "url": "https://github.com/Snehee2901/CancerApp/blob/main/colonca1.jpeg?raw=true",
-    },
-    {
-        "label": "Colon Benign Tissue",
-        "url": "https://github.com/Snehee2901/CancerApp/blob/main/colonn4.jpeg?raw=true",
-    },
-]
+    image_data = [
+        {
+            "label": "Lung Adenocarcinoma",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungaca1.jpeg?raw=true",
+        },
+        {
+            "label": "Lung Benign Tissue",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungn1.jpeg?raw=true",
+        },
+        {
+            "label": "Lung Squamous Cell Carcinoma",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/lungscc1.jpeg?raw=true",
+        },
+        {
+            "label": "Colon Adenocarcinoma",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/colonca1.jpeg?raw=true",
+        },
+        {
+            "label": "Colon Benign Tissue",
+            "url": "https://github.com/Snehee2901/CancerApp/blob/main/colonn4.jpeg?raw=true",
+        },
+    ]
 
-# Number of columns in the gallery
-num_columns = 2
+    # Number of columns in the gallery
+    num_columns = 2
 
-# Create a grid layout for the gallery
-cols = st.columns(num_columns)
+    # Create a grid layout for the gallery
+    cols = st.columns(num_columns)
 
-# Display images and captions in the gallery
-for i, data in enumerate(image_data):
-    with cols[i % num_columns]:
-        st.image(data["url"], caption=data["label"], use_column_width=True)
+    # Display images and captions in the gallery
+    for i, data in enumerate(image_data):
+        with cols[i % num_columns]:
+            st.image(data["url"], caption=data["label"], use_column_width=True)
 
+if selected == "Model information":
+    st.markdown(
+        """<div style="text-align: justify"> The model has been trained using the Convonutional Neural Network (CNN). The CNN is known 
+                for its efficiency on the image data. The CNN typically has three layers: a convolutional layer, a pooling layer 
+                and a fully connected layer. The model trained for this data has 2 layers each having a convolutional, pooling 
+                layer and one fully connected layer. The accuracy metrics of the model are given below:
+                  </div>""",
+        unsafe_allow_html=True,
+    )
+    st.markdown("""<img src ="">""", unsafe_allow_html=True)
 # Display the uploaded image
 if selected == "Model predictions":
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
