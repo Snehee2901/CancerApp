@@ -2,7 +2,7 @@
 
 ## This app can be used to predict the type of the cancerous cell from the uploaded image.
 
-This project is dedicated to developing an innovative and user-friendly application for predicting cancerous cells using machine learning and deep learning techniques. Early and accurate cancer detection can significantly improve patient outcomes, and this app aims to assist healthcare professionals in their diagnostic processes.
+This project is dedicated to developing an innovative and user-friendly application for predicting cancerous cells using machine learning and deep learning techniques. Early and accurate cancer detection can significantly improve patient outcomes, and this app aims to assist healthcare professionals in their diagnostic processes. The deplyed app can be accessed at this <a href="https://cancerapp.streamlit.app/">link</a>.
 
 ## Key Features
 
